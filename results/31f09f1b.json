@@ -1,5 +1,5 @@
 {
-    "remarks": "@vmessprotocol رفع فیلتر",
+    "remarks": "%F0%9F%94%92%20VL-WS-TLS%20%F0%9F%87%B8%F0%9F%87%AC%20SG-20.212.64.16:443",
     "log": {
         "access": "",
         "error": "",
@@ -8,32 +8,39 @@
     "outbounds": [
         {
             "tag": "proxy",
-            "protocol": "vmess",
+            "protocol": "vless",
             "settings": {
                 "vnext": [
                     {
-                        "address": "85.159.229.8",
-                        "port": 8443,
+                        "address": "20.212.64.16",
+                        "port": 443,
                         "users": [
                             {
-                                "id": "afe57557-df24-43e5-9cea-5d2acc2cad08",
+                                "id": "6f995056-7802-4a1d-bff7-61678e626c3f",
                                 "alterId": 0,
                                 "email": "t@t.tt",
-                                "security": "auto"
+                                "security": "auto",
+                                "encryption": "none",
+                                "flow": ""
                             }
                         ]
                     }
                 ]
             },
             "streamSettings": {
-                "network": "grpc",
-                "grpcSettings": {
-                    "serviceName": "",
-                    "multiMode": false,
-                    "idle_timeout": 60,
-                    "health_check_timeout": 20,
-                    "permit_without_stream": false,
-                    "initial_windows_size": 0
+                "network": "ws",
+                "wsSettings": {
+                    "path": "/",
+                    "headers": {
+                        "Host": "sgg1.azurewebsites.net"
+                    }
+                },
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": true,
+                    "serverName": "sgg1.azurewebsites.net",
+                    "alpn": [],
+                    "show": false
                 },
                 "sockopt": {
                     "dialerProxy": "fragment",
