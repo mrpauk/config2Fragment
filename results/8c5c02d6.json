@@ -1,5 +1,5 @@
 {
-    "remarks": "05%2B%F0%9F%8C%A8%F0%9F%87%AC%F0%9F%87%A7%2B%40Surfboardv2ray",
+    "remarks": "@vmessprotocol رفع فیلتر",
     "log": {
         "access": "",
         "error": "",
@@ -8,41 +8,32 @@
     "outbounds": [
         {
             "tag": "proxy",
-            "protocol": "vless",
+            "protocol": "vmess",
             "settings": {
                 "vnext": [
                     {
-                        "address": "crackthecode.ftp.sh",
-                        "port": 443,
+                        "address": "85.159.229.8",
+                        "port": 8443,
                         "users": [
                             {
-                                "id": "43e00e4c-2316-4dc9-8262-cef31886dc56",
+                                "id": "afe57557-df24-43e5-9cea-5d2acc2cad08",
                                 "alterId": 0,
                                 "email": "t@t.tt",
-                                "security": "auto",
-                                "encryption": "none",
-                                "flow": ""
+                                "security": "auto"
                             }
                         ]
                     }
                 ]
             },
             "streamSettings": {
-                "network": "ws",
-                "wsSettings": {
-                    "path": "",
-                    "headers": {
-                        "Host": "vcp3.cushingreflex5.wOrKerS.DEv"
-                    }
-                },
-                "security": "tls",
-                "tlsSettings": {
-                    "allowInsecure": true,
-                    "serverName": "vcp3.cushingreflex5.wOrKerS.DEv",
-                    "alpn": [
-                        "h2"
-                    ],
-                    "show": false
+                "network": "grpc",
+                "grpcSettings": {
+                    "serviceName": "",
+                    "multiMode": false,
+                    "idle_timeout": 60,
+                    "health_check_timeout": 20,
+                    "permit_without_stream": false,
+                    "initial_windows_size": 0
                 },
                 "sockopt": {
                     "dialerProxy": "fragment",
