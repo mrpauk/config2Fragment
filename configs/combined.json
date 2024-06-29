@@ -1,0 +1,101 @@
+[
+    {
+        "remarks": "@vmessprotocol \u0631\u0641\u0639 \u0641\u06cc\u0644\u062a\u0631",
+        "log": {
+            "access": "",
+            "error": "",
+            "loglevel": "warning"
+        },
+        "outbounds": [
+            {
+                "tag": "proxy",
+                "protocol": "vmess",
+                "settings": {
+                    "vnext": [
+                        {
+                            "address": "85.159.229.8",
+                            "port": 8443,
+                            "users": [
+                                {
+                                    "id": "afe57557-df24-43e5-9cea-5d2acc2cad08",
+                                    "alterId": 0,
+                                    "email": "t@t.tt",
+                                    "security": "auto"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "streamSettings": {
+                    "network": "grpc",
+                    "grpcSettings": {
+                        "serviceName": "",
+                        "multiMode": false,
+                        "idle_timeout": 60,
+                        "health_check_timeout": 20,
+                        "permit_without_stream": false,
+                        "initial_windows_size": 0
+                    }
+                },
+                "mux": {
+                    "enabled": false,
+                    "concurrency": -1
+                }
+            },
+            {
+                "tag": "direct",
+                "protocol": "freedom",
+                "settings": {}
+            },
+            {
+                "tag": "block",
+                "protocol": "blackhole",
+                "settings": {
+                    "response": {
+                        "type": "http"
+                    }
+                }
+            }
+        ],
+        "inbounds": [
+            {
+                "tag": "socks",
+                "port": 10808,
+                "listen": "127.0.0.1",
+                "protocol": "socks",
+                "sniffing": {
+                    "enabled": true,
+                    "destOverride": [
+                        "http",
+                        "tls"
+                    ],
+                    "routeOnly": false
+                },
+                "settings": {
+                    "auth": "noauth",
+                    "udp": true,
+                    "allowTransparent": false
+                }
+            },
+            {
+                "tag": "http",
+                "port": 10809,
+                "listen": "127.0.0.1",
+                "protocol": "http",
+                "sniffing": {
+                    "enabled": true,
+                    "destOverride": [
+                        "http",
+                        "tls"
+                    ],
+                    "routeOnly": false
+                },
+                "settings": {
+                    "auth": "noauth",
+                    "udp": true,
+                    "allowTransparent": false
+                }
+            }
+        ]
+    }
+]
