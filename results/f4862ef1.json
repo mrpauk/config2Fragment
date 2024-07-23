@@ -1,5 +1,5 @@
 {
-    "remarks": "%F0%9F%94%92%20VL-WS-TLS%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20NA-104.18.93.17:443",
+    "remarks": "bpb%E2%81%BF%E2%81%B8%20clean%20ip%2030%20%3A%202053",
     "log": {
         "access": "",
         "error": "",
@@ -12,11 +12,11 @@
             "settings": {
                 "vnext": [
                     {
-                        "address": "104.18.93.17",
-                        "port": 443,
+                        "address": "172.67.68.126",
+                        "port": 2053,
                         "users": [
                             {
-                                "id": "2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5",
+                                "id": "c4000cda-6237-4702-ac6a-024444978b8e",
                                 "alterId": 0,
                                 "email": "t@t.tt",
                                 "security": "auto",
@@ -30,16 +30,19 @@
             "streamSettings": {
                 "network": "ws",
                 "wsSettings": {
-                    "path": "TG@ZDYZ2",
+                    "path": "",
                     "headers": {
-                        "Host": "cfed.tgzdyz2.top"
+                        "Host": "BPb-jULy.nSCL.ir"
                     }
                 },
                 "security": "tls",
                 "tlsSettings": {
                     "allowInsecure": true,
-                    "serverName": "cfed.tgzdyz2.top",
-                    "alpn": [],
+                    "serverName": "bPB-jUlY.nScL.iR",
+                    "alpn": [
+                        "http/1.1",
+                        "h2"
+                    ],
                     "show": false
                 },
                 "sockopt": {
