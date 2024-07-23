@@ -1,5 +1,5 @@
 {
-    "remarks": "bpb%E2%81%BF%E2%81%B8%20clean%20ip%201%20%3A%202052",
+    "remarks": "IPv4%E2%87%A2%202%20%3A%20443",
     "log": {
         "access": "",
         "error": "",
@@ -12,8 +12,8 @@
             "settings": {
                 "vnext": [
                     {
-                        "address": "sky.rethinkdns.com",
-                        "port": 2052,
+                        "address": "188.114.97.2",
+                        "port": 443,
                         "users": [
                             {
                                 "id": "c4000cda-6237-4702-ac6a-024444978b8e",
@@ -32,8 +32,18 @@
                 "wsSettings": {
                     "path": "",
                     "headers": {
-                        "Host": "bPb-jUly.bACHEBIAPAIN.ir"
+                        "Host": "bPB-jUly.NsCl.iR"
                     }
+                },
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": true,
+                    "serverName": "BPB-jULY.nSCl.Ir",
+                    "alpn": [
+                        "http/1.1",
+                        "h2"
+                    ],
+                    "show": false
                 },
                 "sockopt": {
                     "dialerProxy": "fragment",
